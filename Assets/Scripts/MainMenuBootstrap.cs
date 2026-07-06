@@ -98,6 +98,7 @@ public class MainMenuBootstrap : MonoBehaviour
 
     public void OnPackTileClicked(PackTileView tile)
     {
+        Debug.Log("Clicked " + tile.Pack);
         if (tile == null)
             return;
 
