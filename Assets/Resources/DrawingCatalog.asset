@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8f3d27501748f49a54f2554fc8a10b, type: 3}
+  m_Name: DrawingCatalog
+  m_EditorClassIdentifier: 
+  drawings:
+  - {fileID: 11400000, guid: 75ac2818dff0c69489e7b7a00bdbcd9f, type: 2}
+  - {fileID: 11400000, guid: dc0823601636ef14b8a92528cf75c44b, type: 2}

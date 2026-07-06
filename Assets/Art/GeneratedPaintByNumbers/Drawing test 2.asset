@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df771097b4485c940b685aac881b8808, type: 3}
+  m_Name: Drawing test 2
+  m_EditorClassIdentifier: 
+  outlineTexture: {fileID: 2800000, guid: 855e9babd96715c4fb66f3ad84c4475e, type: 3}
+  regionIdMap: {fileID: 2800000, guid: 6f7b0769bc940824fad945fa81f6c6e2, type: 3}
+  paletteJson: {fileID: 4900000, guid: bd50e3078d0213a46a8b125f4e6f55ce, type: 3}
+  pack: 0
+  levelNumber: 2

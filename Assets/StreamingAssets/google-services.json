@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "115183187213",
+    "project_id": "color-pixel-e4996",
+    "storage_bucket": "color-pixel-e4996.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115183187213:android:ccf98f4d9c420bb565ac44",
+        "android_client_info": {
+          "package_name": "com.easygamesstudio.colorpixel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3rwGRPHqAe1QFFtwRCOFjMnlSRSmbnWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

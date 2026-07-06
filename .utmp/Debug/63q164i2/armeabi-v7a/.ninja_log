@@ -1,0 +1,12 @@
+# ninja log v5
+179	509	8048553293879440	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	be080286580f61a5
+513	825	8048553296968231	F:/Roshan/Unity/Coloring Drawing and puzzle/Library/PramData/AndroidApplicationController/Cache/com.easygamesstudio.colorpixel/gradle-project/unityLibrary/build/intermediates/cxx/Debug/63q164i2/obj/armeabi-v7a/libswappywrapper.so	6b6bee68d919b2c2
+32	2066	8048553309377073	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ba6abc6e993cb526
+91	2118	8048553309917918	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	f9d8cb9572b4c306
+52	2144	8048553310149148	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	a41c2f02435d6a68
+111	2165	8048553310385256	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	abc206643c1f55fa
+160	2226	8048553311014924	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	69cdf76f5cb25a66
+133	2345	8048553312154165	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	15e4d2bf1cb978e
+72	2368	8048553312362753	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	423277b5f79ae3bc
+2	2382	8048553312448781	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c057c669c3734893
+2383	2579	8048553314533192	F:/Roshan/Unity/Coloring Drawing and puzzle/Library/PramData/AndroidApplicationController/Cache/com.easygamesstudio.colorpixel/gradle-project/unityLibrary/build/intermediates/cxx/Debug/63q164i2/obj/armeabi-v7a/libgame.so	8f5b65babd0856f0

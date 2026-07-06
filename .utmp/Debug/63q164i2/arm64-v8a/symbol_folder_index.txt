@@ -1,0 +1,1 @@
+F:\Roshan\Unity\Coloring Drawing and puzzle\Library\PramData\AndroidApplicationController\Cache\com.easygamesstudio.colorpixel\gradle-project\unityLibrary\build\intermediates\cxx\Debug\63q164i2\obj\arm64-v8a

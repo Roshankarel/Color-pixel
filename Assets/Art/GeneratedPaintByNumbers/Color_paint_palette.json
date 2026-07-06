@@ -1,0 +1,1920 @@
+{
+  "sourceImage": "Color.png",
+  "imageWidth": 1254,
+  "imageHeight": 1254,
+  "colors": [
+    {
+      "number": 1,
+      "hex": "#87CA34"
+    },
+    {
+      "number": 2,
+      "hex": "#8F3FC5"
+    },
+    {
+      "number": 3,
+      "hex": "#0E91E5"
+    },
+    {
+      "number": 4,
+      "hex": "#FA760A"
+    },
+    {
+      "number": 5,
+      "hex": "#FAC403"
+    },
+    {
+      "number": 6,
+      "hex": "#FA4392"
+    },
+    {
+      "number": 7,
+      "hex": "#48BAEE"
+    },
+    {
+      "number": 8,
+      "hex": "#303361"
+    },
+    {
+      "number": 9,
+      "hex": "#683824"
+    }
+  ],
+  "regions": [
+    {
+      "regionId": 1,
+      "colorNumber": 1,
+      "area": 15816,
+      "center": {
+        "x": 626,
+        "y": 55
+      },
+      "bbox": {
+        "xMin": 526,
+        "yMin": 25,
+        "xMax": 725,
+        "yMax": 285
+      }
+    },
+    {
+      "regionId": 2,
+      "colorNumber": 2,
+      "area": 17205,
+      "center": {
+        "x": 323,
+        "y": 156
+      },
+      "bbox": {
+        "xMin": 260,
+        "yMin": 50,
+        "xMax": 577,
+        "yMax": 215
+      }
+    },
+    {
+      "regionId": 3,
+      "colorNumber": 2,
+      "area": 16884,
+      "center": {
+        "x": 930,
+        "y": 157
+      },
+      "bbox": {
+        "xMin": 675,
+        "yMin": 50,
+        "xMax": 988,
+        "yMax": 215
+      }
+    },
+    {
+      "regionId": 4,
+      "colorNumber": 3,
+      "area": 10018,
+      "center": {
+        "x": 587,
+        "y": 176
+      },
+      "bbox": {
+        "xMin": 558,
+        "yMin": 86,
+        "xMax": 692,
+        "yMax": 251
+      }
+    },
+    {
+      "regionId": 5,
+      "colorNumber": 4,
+      "area": 3390,
+      "center": {
+        "x": 491,
+        "y": 141
+      },
+      "bbox": {
+        "xMin": 452,
+        "yMin": 111,
+        "xMax": 528,
+        "yMax": 173
+      }
+    },
+    {
+      "regionId": 6,
+      "colorNumber": 4,
+      "area": 3592,
+      "center": {
+        "x": 767,
+        "y": 141
+      },
+      "bbox": {
+        "xMin": 725,
+        "yMin": 111,
+        "xMax": 803,
+        "yMax": 173
+      }
+    },
+    {
+      "regionId": 7,
+      "colorNumber": 5,
+      "area": 4431,
+      "center": {
+        "x": 397,
+        "y": 167
+      },
+      "bbox": {
+        "xMin": 360,
+        "yMin": 135,
+        "xMax": 447,
+        "yMax": 222
+      }
+    },
+    {
+      "regionId": 8,
+      "colorNumber": 5,
+      "area": 4369,
+      "center": {
+        "x": 858,
+        "y": 169
+      },
+      "bbox": {
+        "xMin": 808,
+        "yMin": 137,
+        "xMax": 892,
+        "yMax": 222
+      }
+    },
+    {
+      "regionId": 9,
+      "colorNumber": 5,
+      "area": 583,
+      "center": {
+        "x": 626,
+        "y": 156
+      },
+      "bbox": {
+        "xMin": 614,
+        "yMin": 144,
+        "xMax": 638,
+        "yMax": 174
+      }
+    },
+    {
+      "regionId": 10,
+      "colorNumber": 2,
+      "area": 4314,
+      "center": {
+        "x": 484,
+        "y": 187
+      },
+      "bbox": {
+        "xMin": 375,
+        "yMin": 175,
+        "xMax": 519,
+        "yMax": 273
+      }
+    },
+    {
+      "regionId": 11,
+      "colorNumber": 2,
+      "area": 4463,
+      "center": {
+        "x": 756,
+        "y": 189
+      },
+      "bbox": {
+        "xMin": 732,
+        "yMin": 175,
+        "xMax": 875,
+        "yMax": 275
+      }
+    },
+    {
+      "regionId": 12,
+      "colorNumber": 6,
+      "area": 9665,
+      "center": {
+        "x": 695,
+        "y": 334
+      },
+      "bbox": {
+        "xMin": 551,
+        "yMin": 177,
+        "xMax": 698,
+        "yMax": 391
+      }
+    },
+    {
+      "regionId": 13,
+      "colorNumber": 4,
+      "area": 1953,
+      "center": {
+        "x": 339,
+        "y": 216
+      },
+      "bbox": {
+        "xMin": 297,
+        "yMin": 200,
+        "xMax": 378,
+        "yMax": 247
+      }
+    },
+    {
+      "regionId": 14,
+      "colorNumber": 4,
+      "area": 2017,
+      "center": {
+        "x": 909,
+        "y": 218
+      },
+      "bbox": {
+        "xMin": 872,
+        "yMin": 201,
+        "xMax": 954,
+        "yMax": 249
+      }
+    },
+    {
+      "regionId": 15,
+      "colorNumber": 1,
+      "area": 9970,
+      "center": {
+        "x": 213,
+        "y": 224
+      },
+      "bbox": {
+        "xMin": 194,
+        "yMin": 205,
+        "xMax": 395,
+        "yMax": 406
+      }
+    },
+    {
+      "regionId": 16,
+      "colorNumber": 1,
+      "area": 10277,
+      "center": {
+        "x": 1033,
+        "y": 226
+      },
+      "bbox": {
+        "xMin": 854,
+        "yMin": 205,
+        "xMax": 1053,
+        "yMax": 406
+      }
+    },
+    {
+      "regionId": 17,
+      "colorNumber": 7,
+      "area": 16144,
+      "center": {
+        "x": 488,
+        "y": 240
+      },
+      "bbox": {
+        "xMin": 399,
+        "yMin": 208,
+        "xMax": 549,
+        "yMax": 407
+      }
+    },
+    {
+      "regionId": 18,
+      "colorNumber": 7,
+      "area": 16213,
+      "center": {
+        "x": 760,
+        "y": 240
+      },
+      "bbox": {
+        "xMin": 701,
+        "yMin": 208,
+        "xMax": 851,
+        "yMax": 407
+      }
+    },
+    {
+      "regionId": 19,
+      "colorNumber": 2,
+      "area": 5521,
+      "center": {
+        "x": 626,
+        "y": 269
+      },
+      "bbox": {
+        "xMin": 578,
+        "yMin": 229,
+        "xMax": 671,
+        "yMax": 361
+      }
+    },
+    {
+      "regionId": 20,
+      "colorNumber": 6,
+      "area": 4337,
+      "center": {
+        "x": 257,
+        "y": 267
+      },
+      "bbox": {
+        "xMin": 232,
+        "yMin": 242,
+        "xMax": 343,
+        "yMax": 357
+      }
+    },
+    {
+      "regionId": 21,
+      "colorNumber": 6,
+      "area": 4634,
+      "center": {
+        "x": 990,
+        "y": 272
+      },
+      "bbox": {
+        "xMin": 904,
+        "yMin": 247,
+        "xMax": 1016,
+        "yMax": 359
+      }
+    },
+    {
+      "regionId": 22,
+      "colorNumber": 2,
+      "area": 15881,
+      "center": {
+        "x": 149,
+        "y": 333
+      },
+      "bbox": {
+        "xMin": 45,
+        "yMin": 256,
+        "xMax": 204,
+        "yMax": 583
+      }
+    },
+    {
+      "regionId": 23,
+      "colorNumber": 2,
+      "area": 16109,
+      "center": {
+        "x": 1099,
+        "y": 331
+      },
+      "bbox": {
+        "xMin": 1046,
+        "yMin": 256,
+        "xMax": 1204,
+        "yMax": 582
+      }
+    },
+    {
+      "regionId": 24,
+      "colorNumber": 5,
+      "area": 1059,
+      "center": {
+        "x": 477,
+        "y": 296
+      },
+      "bbox": {
+        "xMin": 460,
+        "yMin": 278,
+        "xMax": 495,
+        "yMax": 314
+      }
+    },
+    {
+      "regionId": 25,
+      "colorNumber": 5,
+      "area": 1061,
+      "center": {
+        "x": 771,
+        "y": 296
+      },
+      "bbox": {
+        "xMin": 753,
+        "yMin": 278,
+        "xMax": 789,
+        "yMax": 314
+      }
+    },
+    {
+      "regionId": 26,
+      "colorNumber": 3,
+      "area": 10738,
+      "center": {
+        "x": 281,
+        "y": 287
+      },
+      "bbox": {
+        "xMin": 281,
+        "yMin": 285,
+        "xMax": 457,
+        "yMax": 471
+      }
+    },
+    {
+      "regionId": 27,
+      "colorNumber": 8,
+      "area": 37,
+      "center": {
+        "x": 967,
+        "y": 291
+      },
+      "bbox": {
+        "xMin": 931,
+        "yMin": 291,
+        "xMax": 967,
+        "yMax": 291
+      }
+    },
+    {
+      "regionId": 28,
+      "colorNumber": 3,
+      "area": 10244,
+      "center": {
+        "x": 947,
+        "y": 292
+      },
+      "bbox": {
+        "xMin": 790,
+        "yMin": 292,
+        "xMax": 967,
+        "yMax": 472
+      }
+    },
+    {
+      "regionId": 29,
+      "colorNumber": 4,
+      "area": 2352,
+      "center": {
+        "x": 207,
+        "y": 355
+      },
+      "bbox": {
+        "xMin": 187,
+        "yMin": 302,
+        "xMax": 238,
+        "yMax": 386
+      }
+    },
+    {
+      "regionId": 30,
+      "colorNumber": 4,
+      "area": 7777,
+      "center": {
+        "x": 625,
+        "y": 384
+      },
+      "bbox": {
+        "xMin": 582,
+        "yMin": 302,
+        "xMax": 668,
+        "yMax": 454
+      }
+    },
+    {
+      "regionId": 31,
+      "colorNumber": 4,
+      "area": 2065,
+      "center": {
+        "x": 1041,
+        "y": 360
+      },
+      "bbox": {
+        "xMin": 1014,
+        "yMin": 303,
+        "xMax": 1060,
+        "yMax": 386
+      }
+    },
+    {
+      "regionId": 32,
+      "colorNumber": 6,
+      "area": 5262,
+      "center": {
+        "x": 337,
+        "y": 339
+      },
+      "bbox": {
+        "xMin": 318,
+        "yMin": 319,
+        "xMax": 423,
+        "yMax": 436
+      }
+    },
+    {
+      "regionId": 33,
+      "colorNumber": 6,
+      "area": 5008,
+      "center": {
+        "x": 914,
+        "y": 343
+      },
+      "bbox": {
+        "xMin": 825,
+        "yMin": 324,
+        "xMax": 933,
+        "yMax": 436
+      }
+    },
+    {
+      "regionId": 34,
+      "colorNumber": 5,
+      "area": 1525,
+      "center": {
+        "x": 374,
+        "y": 381
+      },
+      "bbox": {
+        "xMin": 353,
+        "yMin": 359,
+        "xMax": 394,
+        "yMax": 404
+      }
+    },
+    {
+      "regionId": 35,
+      "colorNumber": 5,
+      "area": 1472,
+      "center": {
+        "x": 877,
+        "y": 381
+      },
+      "bbox": {
+        "xMin": 855,
+        "yMin": 360,
+        "xMax": 897,
+        "yMax": 404
+      }
+    },
+    {
+      "regionId": 36,
+      "colorNumber": 6,
+      "area": 16388,
+      "center": {
+        "x": 548,
+        "y": 458
+      },
+      "bbox": {
+        "xMin": 483,
+        "yMin": 361,
+        "xMax": 616,
+        "yMax": 557
+      }
+    },
+    {
+      "regionId": 37,
+      "colorNumber": 6,
+      "area": 16348,
+      "center": {
+        "x": 702,
+        "y": 458
+      },
+      "bbox": {
+        "xMin": 635,
+        "yMin": 361,
+        "xMax": 767,
+        "yMax": 557
+      }
+    },
+    {
+      "regionId": 38,
+      "colorNumber": 5,
+      "area": 3682,
+      "center": {
+        "x": 159,
+        "y": 401
+      },
+      "bbox": {
+        "xMin": 131,
+        "yMin": 372,
+        "xMax": 206,
+        "yMax": 450
+      }
+    },
+    {
+      "regionId": 39,
+      "colorNumber": 5,
+      "area": 3683,
+      "center": {
+        "x": 1090,
+        "y": 401
+      },
+      "bbox": {
+        "xMin": 1044,
+        "yMin": 372,
+        "xMax": 1118,
+        "yMax": 450
+      }
+    },
+    {
+      "regionId": 40,
+      "colorNumber": 2,
+      "area": 4287,
+      "center": {
+        "x": 176,
+        "y": 488
+      },
+      "bbox": {
+        "xMin": 168,
+        "yMin": 379,
+        "xMax": 262,
+        "yMax": 522
+      }
+    },
+    {
+      "regionId": 41,
+      "colorNumber": 2,
+      "area": 4269,
+      "center": {
+        "x": 1073,
+        "y": 487
+      },
+      "bbox": {
+        "xMin": 989,
+        "yMin": 379,
+        "xMax": 1081,
+        "yMax": 522
+      }
+    },
+    {
+      "regionId": 42,
+      "colorNumber": 6,
+      "area": 6609,
+      "center": {
+        "x": 815,
+        "y": 440
+      },
+      "bbox": {
+        "xMin": 758,
+        "yMin": 399,
+        "xMax": 859,
+        "yMax": 496
+      }
+    },
+    {
+      "regionId": 43,
+      "colorNumber": 6,
+      "area": 6527,
+      "center": {
+        "x": 435,
+        "y": 441
+      },
+      "bbox": {
+        "xMin": 391,
+        "yMin": 401,
+        "xMax": 492,
+        "yMax": 496
+      }
+    },
+    {
+      "regionId": 44,
+      "colorNumber": 7,
+      "area": 15786,
+      "center": {
+        "x": 229,
+        "y": 487
+      },
+      "bbox": {
+        "xMin": 200,
+        "yMin": 404,
+        "xMax": 401,
+        "yMax": 554
+      }
+    },
+    {
+      "regionId": 45,
+      "colorNumber": 7,
+      "area": 15364,
+      "center": {
+        "x": 1021,
+        "y": 489
+      },
+      "bbox": {
+        "xMin": 850,
+        "yMin": 404,
+        "xMax": 1049,
+        "yMax": 552
+      }
+    },
+    {
+      "regionId": 46,
+      "colorNumber": 4,
+      "area": 3667,
+      "center": {
+        "x": 132,
+        "y": 489
+      },
+      "bbox": {
+        "xMin": 101,
+        "yMin": 453,
+        "xMax": 165,
+        "yMax": 529
+      }
+    },
+    {
+      "regionId": 47,
+      "colorNumber": 4,
+      "area": 3645,
+      "center": {
+        "x": 1117,
+        "y": 488
+      },
+      "bbox": {
+        "xMin": 1084,
+        "yMin": 453,
+        "xMax": 1148,
+        "yMax": 529
+      }
+    },
+    {
+      "regionId": 48,
+      "colorNumber": 4,
+      "area": 3228,
+      "center": {
+        "x": 625,
+        "y": 520
+      },
+      "bbox": {
+        "xMin": 596,
+        "yMin": 461,
+        "xMax": 655,
+        "yMax": 549
+      }
+    },
+    {
+      "regionId": 49,
+      "colorNumber": 5,
+      "area": 1065,
+      "center": {
+        "x": 284,
+        "y": 486
+      },
+      "bbox": {
+        "xMin": 267,
+        "yMin": 468,
+        "xMax": 302,
+        "yMax": 504
+      }
+    },
+    {
+      "regionId": 50,
+      "colorNumber": 5,
+      "area": 1061,
+      "center": {
+        "x": 966,
+        "y": 486
+      },
+      "bbox": {
+        "xMin": 949,
+        "yMin": 468,
+        "xMax": 984,
+        "yMax": 504
+      }
+    },
+    {
+      "regionId": 51,
+      "colorNumber": 6,
+      "area": 15436,
+      "center": {
+        "x": 442,
+        "y": 547
+      },
+      "bbox": {
+        "xMin": 354,
+        "yMin": 486,
+        "xMax": 535,
+        "yMax": 621
+      }
+    },
+    {
+      "regionId": 52,
+      "colorNumber": 6,
+      "area": 15454,
+      "center": {
+        "x": 809,
+        "y": 547
+      },
+      "bbox": {
+        "xMin": 716,
+        "yMin": 486,
+        "xMax": 897,
+        "yMax": 621
+      }
+    },
+    {
+      "regionId": 53,
+      "colorNumber": 4,
+      "area": 2851,
+      "center": {
+        "x": 544,
+        "y": 561
+      },
+      "bbox": {
+        "xMin": 501,
+        "yMin": 508,
+        "xMax": 574,
+        "yMax": 597
+      }
+    },
+    {
+      "regionId": 54,
+      "colorNumber": 4,
+      "area": 2813,
+      "center": {
+        "x": 706,
+        "y": 561
+      },
+      "bbox": {
+        "xMin": 677,
+        "yMin": 508,
+        "xMax": 750,
+        "yMax": 596
+      }
+    },
+    {
+      "regionId": 55,
+      "colorNumber": 1,
+      "area": 15330,
+      "center": {
+        "x": 50,
+        "y": 628
+      },
+      "bbox": {
+        "xMin": 22,
+        "yMin": 529,
+        "xMax": 272,
+        "yMax": 729
+      }
+    },
+    {
+      "regionId": 56,
+      "colorNumber": 1,
+      "area": 15377,
+      "center": {
+        "x": 1197,
+        "y": 629
+      },
+      "bbox": {
+        "xMin": 979,
+        "yMin": 529,
+        "xMax": 1226,
+        "yMax": 729
+      }
+    },
+    {
+      "regionId": 57,
+      "colorNumber": 2,
+      "area": 11444,
+      "center": {
+        "x": 561,
+        "y": 628
+      },
+      "bbox": {
+        "xMin": 550,
+        "yMin": 551,
+        "xMax": 702,
+        "yMax": 706
+      }
+    },
+    {
+      "regionId": 58,
+      "colorNumber": 6,
+      "area": 9845,
+      "center": {
+        "x": 1050,
+        "y": 630
+      },
+      "bbox": {
+        "xMin": 869,
+        "yMin": 553,
+        "xMax": 1071,
+        "yMax": 704
+      }
+    },
+    {
+      "regionId": 59,
+      "colorNumber": 6,
+      "area": 9422,
+      "center": {
+        "x": 324,
+        "y": 561
+      },
+      "bbox": {
+        "xMin": 178,
+        "yMin": 556,
+        "xMax": 382,
+        "yMax": 704
+      }
+    },
+    {
+      "regionId": 60,
+      "colorNumber": 3,
+      "area": 9734,
+      "center": {
+        "x": 179,
+        "y": 587
+      },
+      "bbox": {
+        "xMin": 80,
+        "yMin": 562,
+        "xMax": 241,
+        "yMax": 696
+      }
+    },
+    {
+      "regionId": 61,
+      "colorNumber": 3,
+      "area": 9335,
+      "center": {
+        "x": 1071,
+        "y": 587
+      },
+      "bbox": {
+        "xMin": 1012,
+        "yMin": 562,
+        "xMax": 1167,
+        "yMax": 696
+      }
+    },
+    {
+      "regionId": 62,
+      "colorNumber": 2,
+      "area": 5464,
+      "center": {
+        "x": 986,
+        "y": 629
+      },
+      "bbox": {
+        "xMin": 900,
+        "yMin": 582,
+        "xMax": 1024,
+        "yMax": 674
+      }
+    },
+    {
+      "regionId": 63,
+      "colorNumber": 2,
+      "area": 5638,
+      "center": {
+        "x": 264,
+        "y": 632
+      },
+      "bbox": {
+        "xMin": 224,
+        "yMin": 585,
+        "xMax": 353,
+        "yMax": 677
+      }
+    },
+    {
+      "regionId": 64,
+      "colorNumber": 4,
+      "area": 7128,
+      "center": {
+        "x": 373,
+        "y": 629
+      },
+      "bbox": {
+        "xMin": 297,
+        "yMin": 586,
+        "xMax": 438,
+        "yMax": 671
+      }
+    },
+    {
+      "regionId": 65,
+      "colorNumber": 4,
+      "area": 7091,
+      "center": {
+        "x": 878,
+        "y": 629
+      },
+      "bbox": {
+        "xMin": 814,
+        "yMin": 586,
+        "xMax": 954,
+        "yMax": 671
+      }
+    },
+    {
+      "regionId": 66,
+      "colorNumber": 5,
+      "area": 5407,
+      "center": {
+        "x": 626,
+        "y": 628
+      },
+      "bbox": {
+        "xMin": 585,
+        "yMin": 587,
+        "xMax": 666,
+        "yMax": 669
+      }
+    },
+    {
+      "regionId": 67,
+      "colorNumber": 4,
+      "area": 3658,
+      "center": {
+        "x": 517,
+        "y": 628
+      },
+      "bbox": {
+        "xMin": 447,
+        "yMin": 602,
+        "xMax": 546,
+        "yMax": 654
+      }
+    },
+    {
+      "regionId": 68,
+      "colorNumber": 4,
+      "area": 3747,
+      "center": {
+        "x": 734,
+        "y": 628
+      },
+      "bbox": {
+        "xMin": 706,
+        "yMin": 602,
+        "xMax": 805,
+        "yMax": 654
+      }
+    },
+    {
+      "regionId": 69,
+      "colorNumber": 5,
+      "area": 1006,
+      "center": {
+        "x": 153,
+        "y": 630
+      },
+      "bbox": {
+        "xMin": 138,
+        "yMin": 612,
+        "xMax": 172,
+        "yMax": 648
+      }
+    },
+    {
+      "regionId": 70,
+      "colorNumber": 5,
+      "area": 1017,
+      "center": {
+        "x": 1095,
+        "y": 628
+      },
+      "bbox": {
+        "xMin": 1077,
+        "yMin": 612,
+        "xMax": 1111,
+        "yMax": 648
+      }
+    },
+    {
+      "regionId": 71,
+      "colorNumber": 6,
+      "area": 15128,
+      "center": {
+        "x": 444,
+        "y": 707
+      },
+      "bbox": {
+        "xMin": 355,
+        "yMin": 635,
+        "xMax": 536,
+        "yMax": 768
+      }
+    },
+    {
+      "regionId": 72,
+      "colorNumber": 6,
+      "area": 14986,
+      "center": {
+        "x": 808,
+        "y": 707
+      },
+      "bbox": {
+        "xMin": 716,
+        "yMin": 636,
+        "xMax": 896,
+        "yMax": 768
+      }
+    },
+    {
+      "regionId": 73,
+      "colorNumber": 4,
+      "area": 2822,
+      "center": {
+        "x": 545,
+        "y": 695
+      },
+      "bbox": {
+        "xMin": 501,
+        "yMin": 660,
+        "xMax": 574,
+        "yMax": 748
+      }
+    },
+    {
+      "regionId": 74,
+      "colorNumber": 4,
+      "area": 2797,
+      "center": {
+        "x": 707,
+        "y": 695
+      },
+      "bbox": {
+        "xMin": 677,
+        "yMin": 660,
+        "xMax": 750,
+        "yMax": 747
+      }
+    },
+    {
+      "regionId": 75,
+      "colorNumber": 2,
+      "area": 15465,
+      "center": {
+        "x": 149,
+        "y": 916
+      },
+      "bbox": {
+        "xMin": 45,
+        "yMin": 674,
+        "xMax": 204,
+        "yMax": 991
+      }
+    },
+    {
+      "regionId": 76,
+      "colorNumber": 2,
+      "area": 15445,
+      "center": {
+        "x": 1099,
+        "y": 917
+      },
+      "bbox": {
+        "xMin": 1045,
+        "yMin": 674,
+        "xMax": 1204,
+        "yMax": 991
+      }
+    },
+    {
+      "regionId": 77,
+      "colorNumber": 6,
+      "area": 15900,
+      "center": {
+        "x": 547,
+        "y": 798
+      },
+      "bbox": {
+        "xMin": 483,
+        "yMin": 700,
+        "xMax": 617,
+        "yMax": 891
+      }
+    },
+    {
+      "regionId": 78,
+      "colorNumber": 6,
+      "area": 15946,
+      "center": {
+        "x": 704,
+        "y": 798
+      },
+      "bbox": {
+        "xMin": 635,
+        "yMin": 700,
+        "xMax": 767,
+        "yMax": 891
+      }
+    },
+    {
+      "regionId": 79,
+      "colorNumber": 7,
+      "area": 14821,
+      "center": {
+        "x": 1019,
+        "y": 765
+      },
+      "bbox": {
+        "xMin": 857,
+        "yMin": 705,
+        "xMax": 1049,
+        "yMax": 848
+      }
+    },
+    {
+      "regionId": 80,
+      "colorNumber": 7,
+      "area": 14924,
+      "center": {
+        "x": 230,
+        "y": 764
+      },
+      "bbox": {
+        "xMin": 200,
+        "yMin": 706,
+        "xMax": 394,
+        "yMax": 848
+      }
+    },
+    {
+      "regionId": 81,
+      "colorNumber": 4,
+      "area": 3093,
+      "center": {
+        "x": 625,
+        "y": 736
+      },
+      "bbox": {
+        "xMin": 596,
+        "yMin": 707,
+        "xMax": 655,
+        "yMax": 793
+      }
+    },
+    {
+      "regionId": 82,
+      "colorNumber": 4,
+      "area": 3493,
+      "center": {
+        "x": 132,
+        "y": 766
+      },
+      "bbox": {
+        "xMin": 101,
+        "yMin": 728,
+        "xMax": 164,
+        "yMax": 801
+      }
+    },
+    {
+      "regionId": 83,
+      "colorNumber": 4,
+      "area": 3517,
+      "center": {
+        "x": 1117,
+        "y": 767
+      },
+      "bbox": {
+        "xMin": 1085,
+        "yMin": 728,
+        "xMax": 1148,
+        "yMax": 801
+      }
+    },
+    {
+      "regionId": 84,
+      "colorNumber": 2,
+      "area": 4106,
+      "center": {
+        "x": 177,
+        "y": 765
+      },
+      "bbox": {
+        "xMin": 168,
+        "yMin": 736,
+        "xMax": 263,
+        "yMax": 873
+      }
+    },
+    {
+      "regionId": 85,
+      "colorNumber": 2,
+      "area": 4129,
+      "center": {
+        "x": 1071,
+        "y": 765
+      },
+      "bbox": {
+        "xMin": 986,
+        "yMin": 736,
+        "xMax": 1081,
+        "yMax": 873
+      }
+    },
+    {
+      "regionId": 86,
+      "colorNumber": 5,
+      "area": 1055,
+      "center": {
+        "x": 285,
+        "y": 767
+      },
+      "bbox": {
+        "xMin": 267,
+        "yMin": 749,
+        "xMax": 303,
+        "yMax": 785
+      }
+    },
+    {
+      "regionId": 87,
+      "colorNumber": 5,
+      "area": 1046,
+      "center": {
+        "x": 964,
+        "y": 767
+      },
+      "bbox": {
+        "xMin": 946,
+        "yMin": 749,
+        "xMax": 981,
+        "yMax": 785
+      }
+    },
+    {
+      "regionId": 88,
+      "colorNumber": 6,
+      "area": 6584,
+      "center": {
+        "x": 434,
+        "y": 814
+      },
+      "bbox": {
+        "xMin": 391,
+        "yMin": 758,
+        "xMax": 493,
+        "yMax": 855
+      }
+    },
+    {
+      "regionId": 89,
+      "colorNumber": 6,
+      "area": 6511,
+      "center": {
+        "x": 813,
+        "y": 813
+      },
+      "bbox": {
+        "xMin": 758,
+        "yMin": 758,
+        "xMax": 859,
+        "yMax": 855
+      }
+    },
+    {
+      "regionId": 90,
+      "colorNumber": 3,
+      "area": 10513,
+      "center": {
+        "x": 300,
+        "y": 964
+      },
+      "bbox": {
+        "xMin": 281,
+        "yMin": 780,
+        "xMax": 459,
+        "yMax": 964
+      }
+    },
+    {
+      "regionId": 91,
+      "colorNumber": 3,
+      "area": 10445,
+      "center": {
+        "x": 956,
+        "y": 947
+      },
+      "bbox": {
+        "xMin": 790,
+        "yMin": 780,
+        "xMax": 966,
+        "yMax": 965
+      }
+    },
+    {
+      "regionId": 92,
+      "colorNumber": 4,
+      "area": 7955,
+      "center": {
+        "x": 625,
+        "y": 869
+      },
+      "bbox": {
+        "xMin": 582,
+        "yMin": 800,
+        "xMax": 668,
+        "yMax": 952
+      }
+    },
+    {
+      "regionId": 93,
+      "colorNumber": 5,
+      "area": 3565,
+      "center": {
+        "x": 159,
+        "y": 849
+      },
+      "bbox": {
+        "xMin": 131,
+        "yMin": 802,
+        "xMax": 205,
+        "yMax": 878
+      }
+    },
+    {
+      "regionId": 94,
+      "colorNumber": 5,
+      "area": 3577,
+      "center": {
+        "x": 1091,
+        "y": 849
+      },
+      "bbox": {
+        "xMin": 1045,
+        "yMin": 802,
+        "xMax": 1118,
+        "yMax": 878
+      }
+    },
+    {
+      "regionId": 95,
+      "colorNumber": 6,
+      "area": 5272,
+      "center": {
+        "x": 913,
+        "y": 913
+      },
+      "bbox": {
+        "xMin": 826,
+        "yMin": 817,
+        "xMax": 933,
+        "yMax": 933
+      }
+    },
+    {
+      "regionId": 96,
+      "colorNumber": 6,
+      "area": 5190,
+      "center": {
+        "x": 335,
+        "y": 913
+      },
+      "bbox": {
+        "xMin": 315,
+        "yMin": 818,
+        "xMax": 424,
+        "yMax": 932
+      }
+    },
+    {
+      "regionId": 97,
+      "colorNumber": 7,
+      "area": 16131,
+      "center": {
+        "x": 488,
+        "y": 1014
+      },
+      "bbox": {
+        "xMin": 399,
+        "yMin": 846,
+        "xMax": 546,
+        "yMax": 1046
+      }
+    },
+    {
+      "regionId": 98,
+      "colorNumber": 7,
+      "area": 15880,
+      "center": {
+        "x": 759,
+        "y": 1014
+      },
+      "bbox": {
+        "xMin": 704,
+        "yMin": 846,
+        "xMax": 850,
+        "yMax": 1046
+      }
+    },
+    {
+      "regionId": 99,
+      "colorNumber": 1,
+      "area": 10168,
+      "center": {
+        "x": 214,
+        "y": 1027
+      },
+      "bbox": {
+        "xMin": 194,
+        "yMin": 848,
+        "xMax": 395,
+        "yMax": 1045
+      }
+    },
+    {
+      "regionId": 100,
+      "colorNumber": 1,
+      "area": 10170,
+      "center": {
+        "x": 1034,
+        "y": 1026
+      },
+      "bbox": {
+        "xMin": 854,
+        "yMin": 849,
+        "xMax": 1053,
+        "yMax": 1045
+      }
+    },
+    {
+      "regionId": 101,
+      "colorNumber": 5,
+      "area": 1509,
+      "center": {
+        "x": 373,
+        "y": 873
+      },
+      "bbox": {
+        "xMin": 352,
+        "yMin": 850,
+        "xMax": 394,
+        "yMax": 895
+      }
+    },
+    {
+      "regionId": 102,
+      "colorNumber": 5,
+      "area": 1487,
+      "center": {
+        "x": 876,
+        "y": 873
+      },
+      "bbox": {
+        "xMin": 855,
+        "yMin": 851,
+        "xMax": 897,
+        "yMax": 895
+      }
+    },
+    {
+      "regionId": 103,
+      "colorNumber": 6,
+      "area": 10234,
+      "center": {
+        "x": 626,
+        "y": 1044
+      },
+      "bbox": {
+        "xMin": 547,
+        "yMin": 861,
+        "xMax": 703,
+        "yMax": 1066
+      }
+    },
+    {
+      "regionId": 104,
+      "colorNumber": 4,
+      "area": 2166,
+      "center": {
+        "x": 209,
+        "y": 892
+      },
+      "bbox": {
+        "xMin": 189,
+        "yMin": 865,
+        "xMax": 237,
+        "yMax": 948
+      }
+    },
+    {
+      "regionId": 105,
+      "colorNumber": 4,
+      "area": 2145,
+      "center": {
+        "x": 1040,
+        "y": 892
+      },
+      "bbox": {
+        "xMin": 1012,
+        "yMin": 865,
+        "xMax": 1060,
+        "yMax": 947
+      }
+    },
+    {
+      "regionId": 106,
+      "colorNumber": 2,
+      "area": 5632,
+      "center": {
+        "x": 626,
+        "y": 985
+      },
+      "bbox": {
+        "xMin": 577,
+        "yMin": 892,
+        "xMax": 674,
+        "yMax": 1019
+      }
+    },
+    {
+      "regionId": 107,
+      "colorNumber": 6,
+      "area": 4333,
+      "center": {
+        "x": 258,
+        "y": 983
+      },
+      "bbox": {
+        "xMin": 233,
+        "yMin": 897,
+        "xMax": 343,
+        "yMax": 1008
+      }
+    },
+    {
+      "regionId": 108,
+      "colorNumber": 6,
+      "area": 4357,
+      "center": {
+        "x": 989,
+        "y": 983
+      },
+      "bbox": {
+        "xMin": 905,
+        "yMin": 897,
+        "xMax": 1014,
+        "yMax": 1008
+      }
+    },
+    {
+      "regionId": 109,
+      "colorNumber": 5,
+      "area": 1042,
+      "center": {
+        "x": 479,
+        "y": 958
+      },
+      "bbox": {
+        "xMin": 461,
+        "yMin": 941,
+        "xMax": 496,
+        "yMax": 976
+      }
+    },
+    {
+      "regionId": 110,
+      "colorNumber": 5,
+      "area": 1053,
+      "center": {
+        "x": 770,
+        "y": 958
+      },
+      "bbox": {
+        "xMin": 752,
+        "yMin": 941,
+        "xMax": 788,
+        "yMax": 976
+      }
+    },
+    {
+      "regionId": 111,
+      "colorNumber": 8,
+      "area": 38,
+      "center": {
+        "x": 318,
+        "y": 965
+      },
+      "bbox": {
+        "xMin": 281,
+        "yMin": 965,
+        "xMax": 318,
+        "yMax": 965
+      }
+    },
+    {
+      "regionId": 112,
+      "colorNumber": 9,
+      "area": 45,
+      "center": {
+        "x": 971,
+        "y": 971
+      },
+      "bbox": {
+        "xMin": 927,
+        "yMin": 971,
+        "xMax": 971,
+        "yMax": 971
+      }
+    },
+    {
+      "regionId": 113,
+      "colorNumber": 1,
+      "area": 15400,
+      "center": {
+        "x": 625,
+        "y": 1198
+      },
+      "bbox": {
+        "xMin": 525,
+        "yMin": 974,
+        "xMax": 724,
+        "yMax": 1226
+      }
+    },
+    {
+      "regionId": 114,
+      "colorNumber": 2,
+      "area": 4439,
+      "center": {
+        "x": 482,
+        "y": 1067
+      },
+      "bbox": {
+        "xMin": 375,
+        "yMin": 978,
+        "xMax": 518,
+        "yMax": 1079
+      }
+    },
+    {
+      "regionId": 115,
+      "colorNumber": 2,
+      "area": 4430,
+      "center": {
+        "x": 766,
+        "y": 1067
+      },
+      "bbox": {
+        "xMin": 731,
+        "yMin": 979,
+        "xMax": 874,
+        "yMax": 1079
+      }
+    },
+    {
+      "regionId": 116,
+      "colorNumber": 4,
+      "area": 2116,
+      "center": {
+        "x": 355,
+        "y": 1030
+      },
+      "bbox": {
+        "xMin": 298,
+        "yMin": 1004,
+        "xMax": 380,
+        "yMax": 1053
+      }
+    },
+    {
+      "regionId": 117,
+      "colorNumber": 4,
+      "area": 2046,
+      "center": {
+        "x": 894,
+        "y": 1030
+      },
+      "bbox": {
+        "xMin": 870,
+        "yMin": 1005,
+        "xMax": 952,
+        "yMax": 1053
+      }
+    },
+    {
+      "regionId": 118,
+      "colorNumber": 3,
+      "area": 9719,
+      "center": {
+        "x": 583,
+        "y": 1067
+      },
+      "bbox": {
+        "xMin": 557,
+        "yMin": 1007,
+        "xMax": 692,
+        "yMax": 1167
+      }
+    },
+    {
+      "regionId": 119,
+      "colorNumber": 5,
+      "area": 4195,
+      "center": {
+        "x": 857,
+        "y": 1085
+      },
+      "bbox": {
+        "xMin": 806,
+        "yMin": 1034,
+        "xMax": 891,
+        "yMax": 1116
+      }
+    },
+    {
+      "regionId": 120,
+      "colorNumber": 5,
+      "area": 4106,
+      "center": {
+        "x": 394,
+        "y": 1085
+      },
+      "bbox": {
+        "xMin": 360,
+        "yMin": 1035,
+        "xMax": 445,
+        "yMax": 1116
+      }
+    },
+    {
+      "regionId": 121,
+      "colorNumber": 2,
+      "area": 16729,
+      "center": {
+        "x": 323,
+        "y": 1096
+      },
+      "bbox": {
+        "xMin": 260,
+        "yMin": 1037,
+        "xMax": 575,
+        "yMax": 1201
+      }
+    },
+    {
+      "regionId": 122,
+      "colorNumber": 2,
+      "area": 16550,
+      "center": {
+        "x": 928,
+        "y": 1095
+      },
+      "bbox": {
+        "xMin": 674,
+        "yMin": 1038,
+        "xMax": 989,
+        "yMax": 1201
+      }
+    },
+    {
+      "regionId": 123,
+      "colorNumber": 5,
+      "area": 1038,
+      "center": {
+        "x": 625,
+        "y": 1091
+      },
+      "bbox": {
+        "xMin": 607,
+        "yMin": 1072,
+        "xMax": 642,
+        "yMax": 1109
+      }
+    },
+    {
+      "regionId": 124,
+      "colorNumber": 4,
+      "area": 3319,
+      "center": {
+        "x": 489,
+        "y": 1112
+      },
+      "bbox": {
+        "xMin": 450,
+        "yMin": 1081,
+        "xMax": 526,
+        "yMax": 1141
+      }
+    },
+    {
+      "regionId": 125,
+      "colorNumber": 4,
+      "area": 3389,
+      "center": {
+        "x": 764,
+        "y": 1112
+      },
+      "bbox": {
+        "xMin": 724,
+        "yMin": 1081,
+        "xMax": 801,
+        "yMax": 1141
+      }
+    }
+  ]
+}

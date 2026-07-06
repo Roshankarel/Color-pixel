@@ -1,0 +1,123 @@
+{
+  "sourceImage": "Artboard 2.png",
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "colors": [
+    {
+      "number": 1,
+      "hex": "#E600D6"
+    },
+    {
+      "number": 2,
+      "hex": "#76539F"
+    },
+    {
+      "number": 3,
+      "hex": "#3A499D"
+    },
+    {
+      "number": 4,
+      "hex": "#EB1D24"
+    },
+    {
+      "number": 5,
+      "hex": "#78BF41"
+    },
+    {
+      "number": 6,
+      "hex": "#FAFD4E"
+    }
+  ],
+  "regions": [
+    {
+      "regionId": 1,
+      "colorNumber": 1,
+      "area": 47897,
+      "center": {
+        "x": 716,
+        "y": 237
+      },
+      "bbox": {
+        "xMin": 593,
+        "yMin": 114,
+        "xMax": 839,
+        "yMax": 360
+      }
+    },
+    {
+      "regionId": 2,
+      "colorNumber": 2,
+      "area": 18171,
+      "center": {
+        "x": 549,
+        "y": 254
+      },
+      "bbox": {
+        "xMin": 433,
+        "yMin": 215,
+        "xMax": 651,
+        "yMax": 601
+      }
+    },
+    {
+      "regionId": 3,
+      "colorNumber": 3,
+      "area": 42117,
+      "center": {
+        "x": 563,
+        "y": 410
+      },
+      "bbox": {
+        "xMin": 454,
+        "yMin": 288,
+        "xMax": 685,
+        "yMax": 535
+      }
+    },
+    {
+      "regionId": 4,
+      "colorNumber": 4,
+      "area": 22559,
+      "center": {
+        "x": 760,
+        "y": 430
+      },
+      "bbox": {
+        "xMin": 663,
+        "yMin": 334,
+        "xMax": 841,
+        "yMax": 535
+      }
+    },
+    {
+      "regionId": 5,
+      "colorNumber": 5,
+      "area": 69004,
+      "center": {
+        "x": 353,
+        "y": 605
+      },
+      "bbox": {
+        "xMin": 183,
+        "yMin": 479,
+        "xMax": 569,
+        "yMax": 731
+      }
+    },
+    {
+      "regionId": 6,
+      "colorNumber": 6,
+      "area": 6684,
+      "center": {
+        "x": 510,
+        "y": 550
+      },
+      "bbox": {
+        "xMin": 445,
+        "yMin": 488,
+        "xMax": 569,
+        "yMax": 602
+      }
+    }
+  ]
+}

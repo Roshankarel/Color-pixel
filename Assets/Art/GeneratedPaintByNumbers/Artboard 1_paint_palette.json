@@ -1,0 +1,104 @@
+{
+  "sourceImage": "Artboard 1.png",
+  "imageWidth": 1024,
+  "imageHeight": 1024,
+  "colors": [
+    {
+      "number": 1,
+      "hex": "#7551A1"
+    },
+    {
+      "number": 2,
+      "hex": "#3A4A9F"
+    },
+    {
+      "number": 3,
+      "hex": "#ED1C24"
+    },
+    {
+      "number": 4,
+      "hex": "#78C142"
+    },
+    {
+      "number": 5,
+      "hex": "#EBE83F"
+    }
+  ],
+  "regions": [
+    {
+      "regionId": 1,
+      "colorNumber": 1,
+      "area": 20664,
+      "center": {
+        "x": 546,
+        "y": 255
+      },
+      "bbox": {
+        "xMin": 433,
+        "yMin": 216,
+        "xMax": 651,
+        "yMax": 601
+      }
+    },
+    {
+      "regionId": 2,
+      "colorNumber": 2,
+      "area": 45544,
+      "center": {
+        "x": 576,
+        "y": 409
+      },
+      "bbox": {
+        "xMin": 454,
+        "yMin": 283,
+        "xMax": 685,
+        "yMax": 535
+      }
+    },
+    {
+      "regionId": 3,
+      "colorNumber": 3,
+      "area": 29573,
+      "center": {
+        "x": 766,
+        "y": 409
+      },
+      "bbox": {
+        "xMin": 662,
+        "yMin": 283,
+        "xMax": 840,
+        "yMax": 534
+      }
+    },
+    {
+      "regionId": 4,
+      "colorNumber": 4,
+      "area": 68900,
+      "center": {
+        "x": 353,
+        "y": 605
+      },
+      "bbox": {
+        "xMin": 183,
+        "yMin": 479,
+        "xMax": 569,
+        "yMax": 731
+      }
+    },
+    {
+      "regionId": 5,
+      "colorNumber": 5,
+      "area": 6734,
+      "center": {
+        "x": 509,
+        "y": 549
+      },
+      "bbox": {
+        "xMin": 444,
+        "yMin": 487,
+        "xMax": 569,
+        "yMax": 602
+      }
+    }
+  ]
+}
