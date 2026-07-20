@@ -22,9 +22,7 @@ public class MainMenuBootstrap : MonoBehaviour
     [Header("Library References")]
     public GameObject libraryOverlay;
     public Button libraryCloseButton;
-    public Transform packTileContainer;
-    public PackTileView packTilePrefab;
-    
+
 
     [Header("Locked Pack Modal")]
     public GameObject lockedPackModal;
@@ -34,6 +32,7 @@ public class MainMenuBootstrap : MonoBehaviour
     private ProgressManager progressManager;
     private GameSceneLoader gameSceneLoader;
     private int lastDisplayedCoins = int.MinValue;
+
 
     void Awake()
     {
@@ -45,7 +44,6 @@ public class MainMenuBootstrap : MonoBehaviour
 
         progressManager = ProgressManager.EnsureExists();
         progressManager.InitializeFromCatalog(catalog);
-        progressManager.OnProgressChanged += RefreshPackTiles;
 
         GameSceneLoader.EnsureExists();
         gameSceneLoader = GameSceneLoader.Instance;
@@ -55,13 +53,13 @@ public class MainMenuBootstrap : MonoBehaviour
         HideLibrary();
         HideLockedPackModal();
         RefreshCoins(force: true);
-        RefreshPackTiles();
+        //RefreshPackTiles();
     }
 
     void OnDestroy()
     {
-        if (progressManager != null)
-            progressManager.OnProgressChanged -= RefreshPackTiles;
+        //if (progressManager != null)
+
     }
 
     void Update()
@@ -86,8 +84,6 @@ public class MainMenuBootstrap : MonoBehaviour
     {
         if (libraryOverlay != null)
             libraryOverlay.SetActive(true);
-
-        RefreshPackTiles();
     }
 
     public void HideLibrary()
@@ -96,20 +92,7 @@ public class MainMenuBootstrap : MonoBehaviour
             libraryOverlay.SetActive(false);
     }
 
-    public void OnPackTileClicked(PackTileView tile)
-    {
-        Debug.Log("Clicked " + tile.Pack);
-        if (tile == null)
-            return;
 
-        DrawingPack pack = tile.Pack;
-        if (progressManager.IsPackUnlocked(pack))
-            return;
-
-        ShowLockedPackModal(progressManager.IsPackPurchasable(catalog, pack)
-            ? "Unlock available later:\n100 coins or 2 ads"
-            : "Complete previous pack to unlock.");
-    }
 
     private void WireButtons()
     {
@@ -148,43 +131,6 @@ public class MainMenuBootstrap : MonoBehaviour
         lastDisplayedCoins = coins;
         if (coinsText != null)
             coinsText.text = $"Coins: {progressManager.GetCoins()}";
-    }
-
-    private void RefreshPackTiles()
-    {
-        if (packTileContainer == null || packTilePrefab == null || catalog == null)
-        return;
-
-    // Remove old tiles
-    foreach (Transform child in packTileContainer)
-        Destroy(child.gameObject);
-
-    // Create one tile for each pack
-    foreach (DrawingPack pack in System.Enum.GetValues(typeof(DrawingPack)))
-    {
-        PackTileView tile = Instantiate(packTilePrefab, packTileContainer);
-
-        tile.Pack = pack;
-        tile.SetController(this);
-
-        bool unlocked = progressManager.IsPackUnlocked(pack);
-        bool complete = progressManager.IsPackFinished(catalog, pack);
-        bool purchasable = progressManager.IsPackPurchasable(catalog, pack);
-
-        int completedCount = progressManager.GetCompletedOrSkippedCount(pack);
-        int totalCount = catalog.GetLevelCount(pack);
-
-        DrawingData thumbnail = catalog.GetFirstDrawing(pack);
-
-        tile.Refresh(
-            unlocked,
-            complete,
-            purchasable,
-            completedCount,
-            totalCount,
-            thumbnail == null ? null : thumbnail.outlineTexture
-        );
-    }
     }
 
     private void ShowLockedPackModal(string message)

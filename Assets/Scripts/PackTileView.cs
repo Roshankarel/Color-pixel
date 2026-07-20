@@ -17,7 +17,7 @@ public class PackTileView : MonoBehaviour
     public Image progressFill;
     public Button button;
 
-    private MainMenuBootstrap controller;
+    private LibraryUI controller;
 
     public DrawingPack Pack 
     {
@@ -40,9 +40,9 @@ public class PackTileView : MonoBehaviour
             button.onClick.RemoveListener(NotifyClicked);
     }
 
-    public void SetController(MainMenuBootstrap mainMenuController)
+    public void SetController(LibraryUI libraryUI)
     {
-        controller = mainMenuController;
+        controller = libraryUI;
     }
 
     public void Refresh(bool unlocked, bool complete, bool purchasable, int completedCount, int totalCount, Texture2D thumbnailTexture)
@@ -108,6 +108,7 @@ public class PackTileView : MonoBehaviour
 
         stateText.text = complete ? "Complete" : completedCount + "/" + totalCount + " complete";
     }
+
 
     private string GetPackName(DrawingPack drawingPack)
     {

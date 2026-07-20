@@ -192,6 +192,13 @@ public class ProgressManager : MonoBehaviour
         Debug.Log("Level marked as completed and progress saved.");
     }
 
+    public bool IsLevelCompleted(DrawingPack pack, int levelIndex)
+    {
+        LevelProgressData level = GetLevelProgress(pack, levelIndex);
+
+        return level != null && level.completed;
+    }
+
     public void MarkLevelSkipped(DrawingPack pack, int levelIndex)
     {
         LevelProgressData level = GetLevelProgress(pack, levelIndex);
