@@ -2282,7 +2282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dae67b7841b26446ae99eb5ec124502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tolerance: 28
+  tolerance: 30
   paintPaletteJson: {fileID: 4900000, guid: 50cc54bdd3c34fe4a88ed41ca21d4ee3, type: 3}
   regionIdMap: {fileID: 2800000, guid: 917894b789549ab43b552094454316e8, type: 3}
   allowRecolorCorrectRegions: 0

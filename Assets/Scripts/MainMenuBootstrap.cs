@@ -14,14 +14,12 @@ public class MainMenuBootstrap : MonoBehaviour
     [Header("Main Menu References")]
     public TMP_Text titleText;
     public TMP_Text coinsText;
-    public Button playButton;
-    public Button libraryButton;
+    
     public Button settingsButton;
     public Image bannerAdAnchor;
 
     [Header("Library References")]
-    public GameObject libraryOverlay;
-    public Button libraryCloseButton;
+    
 
 
     [Header("Locked Pack Modal")]
@@ -50,7 +48,6 @@ public class MainMenuBootstrap : MonoBehaviour
         gameSceneLoader.SetGameSceneName(gameSceneName);
 
         WireButtons();
-        HideLibrary();
         HideLockedPackModal();
         RefreshCoins(force: true);
         //RefreshPackTiles();
@@ -67,53 +64,10 @@ public class MainMenuBootstrap : MonoBehaviour
         RefreshCoins(force: false);
     }
 
-    public void PlayCurrentLevel()
-    {
-        DrawingData drawing = progressManager.GetCurrentPlayableDrawing(catalog);
-        if (drawing == null)
-        {
-            Debug.LogError("No playable drawing found.");
-            return;
-        }
-        Debug.Log($"Playable drawing = {drawing.name}");
-        gameSceneLoader.LoadDrawing(drawing);
-       //gameSceneLoader.LoadDrawing(testDrawing);
-    }
-
-    public void ShowLibrary()
-    {
-        if (libraryOverlay != null)
-            libraryOverlay.SetActive(true);
-    }
-
-    public void HideLibrary()
-    {
-        if (libraryOverlay != null)
-            libraryOverlay.SetActive(false);
-    }
-
 
 
     private void WireButtons()
     {
-        if (playButton != null)
-        {
-            playButton.onClick.RemoveListener(PlayCurrentLevel);
-            playButton.onClick.AddListener(PlayCurrentLevel);
-        }
-
-        if (libraryButton != null)
-        {
-            libraryButton.onClick.RemoveListener(ShowLibrary);
-            libraryButton.onClick.AddListener(ShowLibrary);
-        }
-
-        if (libraryCloseButton != null)
-        {
-            libraryCloseButton.onClick.RemoveListener(HideLibrary);
-            libraryCloseButton.onClick.AddListener(HideLibrary);
-        }
-
         if (lockedPackCloseButton != null)
         {
             lockedPackCloseButton.onClick.RemoveListener(HideLockedPackModal);

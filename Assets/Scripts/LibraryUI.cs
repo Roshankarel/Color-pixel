@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Linq;
+using System.Collections.Generic;
 
 public class LibraryUI : MonoBehaviour
 {
@@ -8,13 +9,14 @@ public class LibraryUI : MonoBehaviour
     public DrawingCatalog catalog;
     public Transform packTileContainer;
     public PackTileView packTilePrefab;
+    
     public MainMenuBootstrap mainMenu;
 
     public Transform drawingTileContainer;
     public DrawingTileView drawingTilePrefab;
 
-    public GameObject packPanel;
-    public GameObject drawingPanel; 
+    private readonly List<DrawingTileView> drawingTiles = new();
+
 
     private void Awake()
     {
@@ -23,12 +25,18 @@ public class LibraryUI : MonoBehaviour
             
         progressManager.InitializeFromCatalog(catalog);
     }
-    private void OnEnable()
+
+    private void Start()
     {
         Debug.Log("LibraryUI onEnable");
         BuildLibrary();
-    }
 
+        BuildDrawings();
+
+        FilterCategory(DrawingPack.Mandala);
+        
+    }
+        
     private void BuildLibrary()
     {
         Debug.Log("BuildLibrary");
@@ -46,6 +54,8 @@ public class LibraryUI : MonoBehaviour
         foreach (var pack in packs)
         {
             PackTileView tile = Instantiate(packTilePrefab, packTileContainer);
+
+            Debug.Log("Created Pack Tile : " + pack);
 
             tile.Pack = pack;
             tile.SetController(this);
@@ -69,6 +79,49 @@ public class LibraryUI : MonoBehaviour
                 thumbnail);
         }
     }
+
+    private void BuildDrawings()
+    {
+        drawingTiles.Clear();
+        // Remove old drawing tiles
+        foreach (Transform child in drawingTileContainer)
+            Destroy(child.gameObject);
+
+        // Create a tile for every drawing in the catalog
+        foreach (DrawingData drawing in catalog.drawings.OrderBy(d => d.levelNumber))
+        {
+            DrawingTileView tile =
+                Instantiate(drawingTilePrefab, drawingTileContainer);
+
+            tile.Drawing = drawing;
+            tile.SetController(this);
+
+            drawingTiles.Add(tile);
+
+            bool completed = progressManager.IsLevelCompleted(
+                drawing.pack,
+                drawing.levelNumber - 1);
+
+            bool unlocked =
+                completed ||
+                progressManager.GetCurrentPlayableDrawing(catalog) == drawing;
+
+            tile.Refresh(unlocked, completed);
+
+            Debug.Log("Created drawing tile : " + drawing.name);
+        }
+    }
+
+    private void FilterCategory(DrawingPack pack)
+    {
+        foreach (DrawingTileView tile in drawingTiles)
+        {
+            if (tile == null || tile.Drawing == null)
+                continue;
+
+            tile.gameObject.SetActive(tile.Drawing.pack == pack);
+        }
+    }
     public void OnDrawingTileClicked(DrawingTileView tile)
     {
         if (tile == null)
@@ -78,57 +131,12 @@ public class LibraryUI : MonoBehaviour
 
         GameSceneLoader.Instance.LoadDrawing(tile.Drawing);
     }
-    public void ShowPack(DrawingPack pack)
-    {
-        foreach (Transform child in drawingTileContainer)
-            Destroy(child.gameObject);
-
-        var drawings = catalog.drawings
-            .Where(d => d.pack == pack)
-            .OrderBy(d => d.levelNumber);
-
-        foreach (DrawingData drawing in drawings)
-        {
-            DrawingTileView tile =
-                Instantiate(drawingTilePrefab, drawingTileContainer);
-
-            tile.Drawing = drawing;
-            tile.SetController(this);
-
-            Debug.Log("ProgressManager = " + progressManager);
-            Debug.Log("Drawing = " + drawing);
-
-            bool completed = progressManager.IsLevelCompleted(
-            drawing.pack,
-            drawing.levelNumber - 1);
-
-            bool unlocked =
-            completed ||
-            progressManager.GetCurrentPlayableDrawing(catalog) == drawing;
-
-            tile.Refresh(unlocked, completed);
-
-            Debug.Log("Created drawing tile : " + drawing.name);
-        }
-
-        if (packPanel != null)
-            packPanel.SetActive(false);
-
-        if (drawingPanel != null)
-            drawingPanel.SetActive(true);
-        
-    }
-
+    
     public void OnPackTileClicked(PackTileView tile)
     {
         if (tile == null)
             return;
 
-        ShowPack(tile.Pack);
-    }
-    public void BackToPackList()
-    {
-        drawingPanel.SetActive(false);
-        packPanel.SetActive(true);
+        FilterCategory(tile.Pack);
     }
 }

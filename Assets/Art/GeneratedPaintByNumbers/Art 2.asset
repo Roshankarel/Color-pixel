@@ -15,5 +15,5 @@ MonoBehaviour:
   outlineTexture: {fileID: 2800000, guid: b9e3cbefa1aae084bbf9abb6fd91d479, type: 3}
   regionIdMap: {fileID: 2800000, guid: e7ab6390dc7161c4ebfaaca947af8b38, type: 3}
   paletteJson: {fileID: 4900000, guid: 52f51ba940425354b8c76c7e7d1223c2, type: 3}
-  pack: 0
-  levelNumber: 3
+  pack: 1
+  levelNumber: 1

@@ -1,5 +1,13 @@
 using UnityEngine;
 
+public enum UnlockType
+{
+    Free,
+    Coins,
+    RewardedAd,
+    Premium
+}
+
 public enum DrawingPack
 {
     Mandala,
@@ -21,4 +29,9 @@ public class DrawingData : ScriptableObject
     [Header("Info")]
     public DrawingPack pack;
     public int levelNumber;
+
+    [Header("info")]
+
+    public UnlockType unlockType = UnlockType.Free;
+    public int unlockCost = 100;
 }
