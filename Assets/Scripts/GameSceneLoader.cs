@@ -37,19 +37,23 @@ public class GameSceneLoader : MonoBehaviour
 
     public void LoadDrawing(DrawingData drawing)
     {
+        Debug.Log("LoadDrawing called");
+
         if (drawing == null)
         {
-            Debug.LogWarning("GameSceneLoader: Cannot load a null drawing.");
+            Debug.Log("Drawing is NULL");
             return;
         }
 
-        Debug.Log($"LoadDrawing() received: {drawing.name}");
+        Debug.Log("Scene = " + gameSceneName);
 
         SelectedDrawing = drawing;
 
-        Debug.Log($"SelectedDrawing is now: {SelectedDrawing.name}");
-        
+        Debug.Log("Loading Scene...");
+
         SceneManager.LoadScene(gameSceneName);
+
+        Debug.Log("LoadScene finished");
     }
     public static void ClearSelectedDrawing()
     {

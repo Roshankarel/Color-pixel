@@ -17,3 +17,6 @@ MonoBehaviour:
   paletteJson: {fileID: 4900000, guid: 52f51ba940425354b8c76c7e7d1223c2, type: 3}
   pack: 1
   levelNumber: 1
+  unlockType: 1
+  unlockCost: 100
+  drawingId: 

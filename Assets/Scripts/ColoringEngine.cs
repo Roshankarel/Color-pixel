@@ -79,12 +79,12 @@ public class ColoringEngine : MonoBehaviour
 
     void Update()
     {
-        if (CameraPanZoom.Instance == null)
+        if (CameraController.Instance == null)
             return;
 
-        if (CameraPanZoom.Instance.WasTapThisFrame)
+        if (CameraController.Instance.WasTapThisFrame)
         {
-            HandleInput(CameraPanZoom.Instance.TapScreenPosition);
+            HandleInput(CameraController.Instance.TapScreenPosition);
         }
     }
 

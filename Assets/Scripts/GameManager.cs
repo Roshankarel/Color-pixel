@@ -69,18 +69,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Next Button Pressed");
 
-        DrawingData nextDrawing = progressManager.GetCurrentPlayableDrawing(catalog);
-
-    if (nextDrawing == null)
-    {
-        Debug.Log("No more drawings available.");
-
-        // We'll return to the Main Menu later.
-        return;
-    }
-
-    Debug.Log("Loading next drawing: " + nextDrawing.name);
-
-    GameSceneLoader.Instance.LoadDrawing(nextDrawing);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 }

@@ -12,13 +12,25 @@ public class CameraPanZoom : MonoBehaviour
     [SerializeField] private float maxZoom = 15f;
     [SerializeField] private float zoomSpeed = 5f;
 
+    [Header("Zoom Animation")]
+    [SerializeField] private float zoomSmoothSpeed = 10f;
+
     [Header("Pan")]
     [SerializeField] private float panSpeed = 1f;
+    [SerializeField] private float panSmoothSpeed = 15f;
+    private Vector3 cameraVelocity;
+
+
     [Header("Clamp")]
     [SerializeField] private float edgePadding = 0.25f;
 
     [Header("Tap Detection")]
     [SerializeField] private float tapThreshold = 10f;
+
+    [Header("Double Tap")]
+    [SerializeField] private float doubleTapTime = 0.3f;
+
+    private float lastTapTime = -1f;
 
     private Vector2 pointerDownScreenPos;
     public bool WasTapThisFrame { get; private set; }
@@ -29,6 +41,8 @@ public class CameraPanZoom : MonoBehaviour
 
     
     private float defaultZoom;
+    private float targetZoom;
+    private Vector3 targetPosition;
     private Bounds drawingBounds;
     private bool isPanning;
     private Vector3 dragStartWorld;
@@ -63,6 +77,8 @@ public class CameraPanZoom : MonoBehaviour
         defaultZoom = Mathf.Max(verticalSize, horizontalSize);
 
         targetCamera.orthographicSize = defaultZoom;
+        targetZoom = defaultZoom;
+        targetPosition = targetCamera.transform.position;
 
         // Dynamic zoom limits
         maxZoom = defaultZoom;
@@ -82,7 +98,8 @@ public class CameraPanZoom : MonoBehaviour
             HandleTouchInput();
     #endif
 
-            // Mobile pinch and pan will be added next.
+        SmoothZoom();   
+        SmoothPosition(); // Mobile pinch and pan will be added next.
         }
 
     #if UNITY_EDITOR || UNITY_STANDALONE
@@ -94,13 +111,17 @@ public class CameraPanZoom : MonoBehaviour
             if (Mathf.Abs(scroll) < 0.01f)
                 return;
 
-            targetCamera.orthographicSize -= scroll * zoomSpeed;
+            targetZoom -= scroll * zoomSpeed;
 
-            targetCamera.orthographicSize = Mathf.Clamp(
-                targetCamera.orthographicSize,
+            targetZoom = Mathf.Clamp(
+                targetZoom,
                 minZoom,
                 maxZoom);
                 ClampCamera();
+            if (targetZoom >= maxZoom - 0.01f)
+            {
+                ResetView();
+            }
         }
         private void HandleMousePan()
         {
@@ -119,11 +140,18 @@ public class CameraPanZoom : MonoBehaviour
             {
                 if (!isPanning)
                 {
-                    if (targetCamera.orthographicSize >= defaultZoom)
+                    if (targetCamera.orthographicSize >= defaultZoom - 0.02f)
                     return;
                     
-                    TapScreenPosition = Input.mousePosition;
-                    WasTapThisFrame = true;
+                    if (IsDoubleTap())
+                    {
+                        ResetView();
+                    }
+                    else
+                    {
+                        TapScreenPosition = Input.mousePosition;
+                        WasTapThisFrame = true;
+                    }
                 }
 
                 // Don't pan when fully zoomed out.
@@ -150,7 +178,7 @@ public class CameraPanZoom : MonoBehaviour
 
                 Vector3 delta = dragStartWorld - currentWorld;
 
-                targetCamera.transform.position += delta;
+                targetPosition += delta;
 
                 ClampCamera();
 
@@ -196,14 +224,19 @@ public class CameraPanZoom : MonoBehaviour
 
             float delta = currentDistance - lastPinchDistance;
 
-            targetCamera.orthographicSize -= delta * 0.01f;
+            targetZoom -= delta * 0.01f;
 
-            targetCamera.orthographicSize = Mathf.Clamp(
-                targetCamera.orthographicSize,
+            targetZoom = Mathf.Clamp(
+                targetZoom,
                 minZoom,
                 maxZoom);
 
             ClampCamera();
+
+            if (targetZoom >= maxZoom - 0.01f)
+            {
+                ResetView();
+            }
 
             lastPinchDistance = currentDistance;
         }
@@ -236,7 +269,7 @@ public class CameraPanZoom : MonoBehaviour
 
                     if (isPanning)
                     {
-                        if (targetCamera.orthographicSize >= defaultZoom)
+                        if (targetCamera.orthographicSize >= defaultZoom - 0.02f)
                         return;
 
                         Vector3 currentWorld =
@@ -244,7 +277,7 @@ public class CameraPanZoom : MonoBehaviour
 
                         Vector3 delta = dragStartWorld - currentWorld;
 
-                        targetCamera.transform.position += delta;
+                        targetPosition += delta;
 
                         ClampCamera();
 
@@ -258,8 +291,15 @@ public class CameraPanZoom : MonoBehaviour
 
                     if (!isPanning)
                     {
-                        TapScreenPosition = touch.position;
-                        WasTapThisFrame = true;
+                        if (IsDoubleTap())
+                        {
+                            ResetView();
+                        }
+                        else
+                        {
+                            TapScreenPosition = touch.position;
+                            WasTapThisFrame = true;
+                        }
                     }
 
                     isPanning = false;
@@ -273,7 +313,7 @@ public class CameraPanZoom : MonoBehaviour
                 if (drawingRenderer == null || drawingRenderer.sprite == null)
                     return;
 
-                Bounds bounds = drawingRenderer.bounds;
+                Bounds bounds = drawingBounds;
 
                 float camHeight = targetCamera.orthographicSize;
                 float camWidth = camHeight * targetCamera.aspect;
@@ -284,7 +324,7 @@ public class CameraPanZoom : MonoBehaviour
                 float minY = bounds.min.y + camHeight - edgePadding;
                 float maxY = bounds.max.y - camHeight + edgePadding;
 
-                Vector3 pos = targetCamera.transform.position;
+                Vector3 pos = targetPosition;
 
                 // Drawing smaller than screen
                 if (minX > maxX)
@@ -297,7 +337,7 @@ public class CameraPanZoom : MonoBehaviour
                 else
                     pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
-                targetCamera.transform.position = new Vector3(
+                targetPosition = new Vector3(
                     pos.x,
                     pos.y,
                     targetCamera.transform.position.z);
@@ -308,8 +348,45 @@ public class CameraPanZoom : MonoBehaviour
 
     public void ResetView()
     {
-        targetCamera.orthographicSize = defaultZoom;
-        targetCamera.transform.position =
-            new Vector3(0f, 0f, targetCamera.transform.position.z);
+        drawingBounds = drawingRenderer.bounds;
+
+        targetZoom = defaultZoom;
+
+        targetPosition =
+        new Vector3(
+            drawingBounds.center.x,
+            drawingBounds.center.y,
+            targetCamera.transform.position.z);
+
+        ClampCamera();
+    }
+
+    private bool IsDoubleTap()
+    {
+        if (Time.time - lastTapTime <= doubleTapTime)
+        {
+            lastTapTime = -1f;
+            return true;
+        }
+
+        lastTapTime = Time.time;
+        return false;
+    }
+    private void SmoothZoom()
+    {
+        targetCamera.orthographicSize = Mathf.Lerp(
+            targetCamera.orthographicSize,
+            targetZoom,
+            Time.deltaTime * zoomSmoothSpeed);
+
+        ClampCamera();
+    }
+    private void SmoothPosition()
+    {
+        targetCamera.transform.position = Vector3.SmoothDamp(
+            targetCamera.transform.position,
+            targetPosition,
+            ref cameraVelocity,
+            0.08f);
     }
 }

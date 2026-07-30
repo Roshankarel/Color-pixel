@@ -30,8 +30,11 @@ public class DrawingData : ScriptableObject
     public DrawingPack pack;
     public int levelNumber;
 
-    [Header("info")]
+    [Header("Unlock Info")]
 
     public UnlockType unlockType = UnlockType.Free;
     public int unlockCost = 100;
+
+
+    public string Id => $"{pack}_{levelNumber}";
 }

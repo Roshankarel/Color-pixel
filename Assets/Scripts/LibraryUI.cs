@@ -15,6 +15,8 @@ public class LibraryUI : MonoBehaviour
     public Transform drawingTileContainer;
     public DrawingTileView drawingTilePrefab;
 
+    [SerializeField] private UnlockPopupUI unlockPopup;
+
     private readonly List<DrawingTileView> drawingTiles = new();
 
 
@@ -63,20 +65,17 @@ public class LibraryUI : MonoBehaviour
             int total = catalog.drawings.Count(d => d.pack == pack);
             int completed = progressManager.GetCompletedOrSkippedCount(pack);
 
-            bool unlocked = progressManager.IsPackUnlocked(pack);
-            bool complete = completed == total;
-            bool purchasable = false;
+           
 
             Texture2D thumbnail =
                 catalog.drawings.First(d => d.pack == pack).outlineTexture;
+            bool complete = completed == total;
 
             tile.Refresh(
-                unlocked,
-                complete,
-                purchasable,
-                completed,
-                total,
-                thumbnail);
+                  complete,
+                  completed,
+                  total,
+                  thumbnail);
         }
     }
 
@@ -99,14 +98,13 @@ public class LibraryUI : MonoBehaviour
             drawingTiles.Add(tile);
 
             bool completed = progressManager.IsLevelCompleted(
-                drawing.pack,
-                drawing.levelNumber - 1);
+            drawing.pack,
+            drawing.levelNumber - 1);
 
-            bool unlocked =
-                completed ||
-                progressManager.GetCurrentPlayableDrawing(catalog) == drawing;
+            // New unlock system
+            bool unlocked = progressManager.IsDrawingUnlocked(drawing);
 
-            tile.Refresh(unlocked, completed);
+            tile.Refresh(completed);
 
             Debug.Log("Created drawing tile : " + drawing.name);
         }
@@ -127,9 +125,34 @@ public class LibraryUI : MonoBehaviour
         if (tile == null)
             return;
 
-        Debug.Log("Loading drawing : " + tile.Drawing.name);
+        DrawingData drawing = tile.Drawing;
 
-        GameSceneLoader.Instance.LoadDrawing(tile.Drawing);
+        if (progressManager.IsDrawingUnlocked(drawing))
+        {
+            Debug.Log("Loading drawing : " + drawing.name);
+            GameSceneLoader.Instance.LoadDrawing(drawing);
+            return;
+        }
+
+        switch (drawing.unlockType)
+        {
+            case UnlockType.Coins:
+                unlockPopup.Show(drawing);
+                break;
+
+            case UnlockType.RewardedAd:
+                progressManager.UnlockRewardedDrawing(drawing);
+
+                GameSceneLoader.Instance.LoadDrawing(drawing);
+                break;
+
+            case UnlockType.Premium:
+                PremiumManager.EnsureExists().UnlockPremium();
+
+                GameSceneLoader.Instance.LoadDrawing(drawing);
+
+                break;
+        }
     }
     
     public void OnPackTileClicked(PackTileView tile)
@@ -138,5 +161,23 @@ public class LibraryUI : MonoBehaviour
             return;
 
         FilterCategory(tile.Pack);
+    }
+
+    public void RefreshDrawing(DrawingData drawing)
+    {
+        foreach (DrawingTileView tile in drawingTiles)
+        {
+            if (tile.Drawing != drawing)
+                continue;
+
+            bool completed = progressManager.IsLevelCompleted(
+                drawing.pack,
+                drawing.levelNumber - 1);
+
+            bool unlocked = progressManager.IsDrawingUnlocked(drawing);
+
+            tile.Refresh(completed);
+            return;
+        }
     }
 }

@@ -45,26 +45,26 @@ public class PackTileView : MonoBehaviour
         controller = libraryUI;
     }
 
-    public void Refresh(bool unlocked, bool complete, bool purchasable, int completedCount, int totalCount, Texture2D thumbnailTexture)
+    public void Refresh(bool complete,int completedCount,int totalCount,Texture2D thumbnailTexture)
     {
         if (nameText != null)
             nameText.text = GetPackName(pack);
 
-        RefreshThumbnail(thumbnailTexture, unlocked);
-        RefreshStateText(unlocked, complete, purchasable, completedCount, totalCount);
+        RefreshThumbnail(thumbnailTexture);
+        RefreshStateText( complete,  completedCount, totalCount);
 
         if (lockIcon != null)
-            lockIcon.SetActive(!unlocked);
+            lockIcon.SetActive(false);
 
         if (completeBadge != null)
-            completeBadge.SetActive(unlocked && complete);
+            completeBadge.SetActive(complete);
 
         if (progressFill != null)
             progressFill.fillAmount = totalCount <= 0 ? 0f : Mathf.Clamp01(completedCount / (float)totalCount);
 
         Image background = GetComponent<Image>();
         if (background != null)
-            background.color = unlocked ? Color.white : new Color(0.72f, 0.74f, 0.78f, 1f);
+            background.color = Color.white;
     }
 
     private void NotifyClicked()
@@ -73,12 +73,12 @@ public class PackTileView : MonoBehaviour
             controller.OnPackTileClicked(this);
     }
 
-    private void RefreshThumbnail(Texture2D thumbnailTexture, bool unlocked)
+    private void RefreshThumbnail(Texture2D thumbnailTexture)
     {
         if (thumbnailImage == null)
             return;
 
-        thumbnailImage.color = unlocked ? Color.white : new Color(0.68f, 0.7f, 0.74f, 1f);
+        thumbnailImage.color = Color.white;
         thumbnailImage.preserveAspect = true;
 
         if (thumbnailTexture == null)
@@ -95,18 +95,14 @@ public class PackTileView : MonoBehaviour
         );
     }
 
-    private void RefreshStateText(bool unlocked, bool complete, bool purchasable, int completedCount, int totalCount)
+    private void RefreshStateText(bool complete, int completedCount, int totalCount)
     {
         if (stateText == null)
             return;
 
-        if (!unlocked)
-        {
-            stateText.text = purchasable ? "100 coins or 2 ads to unlock" : "Complete previous pack to unlock";
-            return;
-        }
-
-        stateText.text = complete ? "Complete" : completedCount + "/" + totalCount + " complete";
+        stateText.text = complete
+            ? "Complete"
+            : $"{completedCount}/{totalCount} Complete";
     }
 
 

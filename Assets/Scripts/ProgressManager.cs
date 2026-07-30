@@ -62,35 +62,6 @@ public class ProgressManager : MonoBehaviour
         Save();
     }
 
-    public DrawingData GetCurrentPlayableDrawing(DrawingCatalog catalog)
-    {
-        if (catalog == null)
-            return null;
-
-        DrawingData candidate = null;
-
-        for (int i = 0; i < DrawingCatalog.PackOrder.Length; i++)
-        {
-            DrawingPack pack = DrawingCatalog.PackOrder[i];
-            if (!IsPackUnlocked(pack))
-                continue;
-
-            List<DrawingData> drawings = catalog.GetDrawings(pack);
-            if (drawings.Count == 0)
-                continue;
-
-            PackProgressData packData = GetOrCreatePackData(pack);
-            int index = packData.currentUnlockedLevelIndex;
-
-            // Pack finished
-            if (index >= drawings.Count)
-                continue;
-
-            candidate = drawings[index];
-        }
-
-        return candidate;
-    }
 
     public bool IsPackUnlocked(DrawingPack pack)
     {
@@ -186,7 +157,6 @@ public class ProgressManager : MonoBehaviour
         level.completed = true;
         level.skipped = false;
         level.starCount = Mathf.Clamp(Mathf.Max(level.starCount, starCount), 0, 3);
-        AdvanceUnlockedLevel(pack, levelIndex);
         SaveAndNotify();
 
         Debug.Log("Level marked as completed and progress saved.");
@@ -197,6 +167,72 @@ public class ProgressManager : MonoBehaviour
         LevelProgressData level = GetLevelProgress(pack, levelIndex);
 
         return level != null && level.completed;
+    }
+
+    public bool IsDrawingUnlocked(DrawingData drawing)
+    {
+        if (drawing == null)
+            return false;
+
+        switch (drawing.unlockType)
+        {
+            case UnlockType.Free:
+                return true;
+
+            case UnlockType.Coins:
+                // Temporary.
+                // We'll replace this with purchase checking later.
+                return IsDrawingPurchased(drawing);
+
+            case UnlockType.RewardedAd:
+                // Temporary.
+                return saveData.rewardedUnlockedDrawings.Contains(drawing.Id);
+
+            case UnlockType.Premium:
+                return PremiumManager.EnsureExists().HasPremium();
+
+            default:
+                return false;
+        }
+    }
+
+    public void UnlockRewardedDrawing(DrawingData drawing)
+    {
+        if (drawing == null)
+            return;
+
+        if (saveData.rewardedUnlockedDrawings.Contains(drawing.Id))
+            return;
+
+        saveData.rewardedUnlockedDrawings.Add(drawing.Id);
+
+        SaveAndNotify();
+    }
+
+    public bool IsDrawingPurchased(DrawingData drawing)
+    {
+        if (drawing == null)
+            return false;
+
+        return saveData.purchasedDrawings.Contains(drawing.Id);
+    }
+
+    public bool PurchaseDrawing(DrawingData drawing)
+    {
+        if (drawing == null)
+            return false;
+
+        if (IsDrawingPurchased(drawing))
+            return true;
+
+        if (!SpendCoins(drawing.unlockCost))
+            return false;
+
+        saveData.purchasedDrawings.Add(drawing.Id);
+
+        SaveAndNotify();
+
+        return true;
     }
 
     public void MarkLevelSkipped(DrawingPack pack, int levelIndex)
@@ -379,9 +415,14 @@ public class ProgressManager : MonoBehaviour
 [Serializable]
 public class ProgressSaveData
 {
-    public int coins = 0;
+    public int coins = 100;
 
-    public List<PackProgressData> packs = new List<PackProgressData>();
+    public List<PackProgressData> packs = new();
+
+    // New
+    public List<string> purchasedDrawings = new();
+
+    public List<string> rewardedUnlockedDrawings = new();
 }
 
 [Serializable]

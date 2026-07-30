@@ -7,11 +7,15 @@ public class DrawingTileView : MonoBehaviour
     public DrawingData Drawing;
 
     [Header("UI")]
-    [SerializeField] private TMP_Text nameText;
-    [SerializeField] private TMP_Text statusText;
+    
     [SerializeField] private Image thumbnailImage;
-    [SerializeField] private GameObject lockIcon;
+    [SerializeField] private Image badgeIcon;
     [SerializeField] private Button button;
+
+
+    [SerializeField] private Sprite coinSprite;
+    [SerializeField] private Sprite rewardedAdSprite;
+    [SerializeField] private Sprite premiumSprite;
 
     private LibraryUI controller;
 
@@ -31,17 +35,39 @@ public class DrawingTileView : MonoBehaviour
 
     
 
-    public void Refresh(bool unlocked, bool completed)
+    public void Refresh(bool completed)
     {
-        if (nameText != null)
-            nameText.text = Drawing.name;
 
-        if (statusText != null)
-            statusText.text = completed ? "Completed" :
-                            unlocked ? "Ready" : "Locked";
+        if (badgeIcon != null)
+        {
+            badgeIcon.gameObject.SetActive(false);
 
-        if (lockIcon != null)
-            lockIcon.SetActive(!unlocked);
+            // Completed drawings don't show an unlock badge.
+            if (!completed)
+            {
+                switch (Drawing.unlockType)
+                {
+                    case UnlockType.Free:
+                        // No badge.
+                        break;
+
+                    case UnlockType.Coins:
+                        badgeIcon.sprite = coinSprite;
+                        badgeIcon.gameObject.SetActive(true);
+                        break;
+
+                    case UnlockType.RewardedAd:
+                        badgeIcon.sprite = rewardedAdSprite;
+                        badgeIcon.gameObject.SetActive(true);
+                        break;
+
+                    case UnlockType.Premium:
+                        badgeIcon.sprite = premiumSprite;
+                        badgeIcon.gameObject.SetActive(true);
+                        break;
+                }
+            }
+        }
 
         if (thumbnailImage != null)
         {
@@ -55,7 +81,7 @@ public class DrawingTileView : MonoBehaviour
         }
 
         if (button != null)
-            button.interactable = unlocked;
+            button.interactable = true;
     }
 
     private void OnClicked()
